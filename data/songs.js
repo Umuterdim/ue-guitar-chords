@@ -5,34 +5,40 @@ export const songs = [
       id: 1,
       title: "Gitme Benden",
       artist: "Çağrı Ergün",
-      key: "Em",
+      key: "G",
       capo: 0,
       difficulty: "Orta",
       tags: ["türkçe", "rock"],
       chords: `
-  [Intro]
-  Em C D Bm
-  Em C D Bm
-  
-  [Verse]
-  Em              C
-  Gitme benden ne olur kal
-  D                 Bm
-  Sensizliğe dayanmaz bu hal
-  Em                C
-  Gözlerimde saklı kalan
-  D                    Bm
-  Son bir sözüm var, duy beni anla
-  
-  [Chorus]
-  Em           C
-  Gitme benden, kal yanımda
-  D                 Bm
-  Ne olursun bırakma
-  Em              C
-  Bu şehir sensiz soğuk
-  D                 Bm
-  Yalnızlık vurur gece boyunca
+C          Am             Em
+Yok olmuş gençliğim giderken kaybettiğim
+C               Am           Em
+ Umudum geç olmadan çekip gitmiş
+C           Am               Em
+ Yarından sebep yok bugün bitmiş
+C                Am           Em
+ Geçtin hep aklımdan vuruldum bak
+
+D                 C              D
+ Bıraktın ellerimi görmemiştin beni
+
+Em
+Ağlıyorum ya giderken
+Am
+Gözlerimden düştü birden
+C
+Yanakların hep ıslanmış
+D
+Gözyaşlarıma sarılmış
+Em
+Gülmüyordun ya kaçarken
+Am
+Peşinden hep koştum ben
+C
+Böyle yalnız kimsesiz
+D
+Neden neden gitme benden
+
       `,
       notes: "Orta tempo, klasik Türkçe rock ritmiyle çalınabilir."
     },
