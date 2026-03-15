@@ -92,28 +92,52 @@ Neden neden gitme benden
     },
     {
       id: 4,
-      title: "Yandım",
+      title: "Oyun Bozan",
       artist: "Mor ve Ötesi",
-      key: "F#m",
+      key: "D",
       capo: 2,
       difficulty: "Orta",
       tags: ["türkçe", "rock"],
       categories: ["türkçe rock", "samiş"],
       chords: `
-  [Intro]
-  Em D C B7
-  
-  [Verse]
-  Em               D
-  Gözlerin uzaklarda, ben buradayım
-  C                B7
-  Söyle şimdi kiminle, ben yanayım
-  
-  [Chorus]
-  Em            D
-  Yandım, yine sana yandım
-  C                 B7
-  Adını kalbime kazıdım
+  Intro:   x2
+Bm   D   F#m   
+
+Bm                             D    Bm                   D
+Kanun mu bu yalnızlık, içindeki yabancı 
+Em                           G                      Bm  D  F#m
+El üstünde dururken, kuyuya düşen 
+Bm                          D    Bm                   D
+Alnımda yazanlar mı, aklımda kalanlar mı 
+Em                         G                   Bm  D  F#m
+Oyunbozan mı haklı, biri söylese 
+
+Bm
+Bak dinledim seni dokunmadım sana        
+                                           Em
+Dokunmadım kalan rüyalara 
+                                           G
+Zarar ziyan döküldü ortaya 
+                                       Bm
+Ölüm kadar rahatmış ayrılık 
+
+Ufak tefek birkaç sorun mu var 
+                                               Em
+Geçer geçer  zaman şu an yalan 
+                                         G
+Nedir ki bak, silindi hafızam 
+                 A                         Bm D F#m 
+Hayat kadar yalanmış ayrılık 
+
+Bm              A           G
+Alnımda yazanlar mı 
+                  F#m      Em            
+Aklımda kalanlar mı 
+         F#m              G
+Oyunbozan mı haklı 
+               Bm  D  F#m
+Biri söylese
+
       `,
       notes: "Capo 2 ile Em şekilleri rahat çalınır."
     },
