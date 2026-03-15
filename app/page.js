@@ -12,6 +12,28 @@ const categories = [
   "ingilizce",
 ];
 
+function formatChords(chordsText) {
+  if (!chordsText) return "";
+
+  // HTML'yi kaçır
+  let safe = chordsText
+    .trim()
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
+
+  // Basit akor deseni: A-G, #/b, m, 7, sus2/sus4 gibi
+  const chordRegex =
+    /\b([A-G](?:#|b)?(?:m|maj|min|dim|aug)?(?:7|9|11|13)?(?:sus2|sus4)?)(?=\s|$)/g;
+
+  safe = safe.replace(
+    chordRegex,
+    '<span class="chord-token">$1</span>'
+  );
+
+  return safe;
+}
+
 export default function Home() {
   const [search, setSearch] = useState("");
   const [keyFilter, setKeyFilter] = useState("");
@@ -131,7 +153,12 @@ export default function Home() {
                 {selectedSong.difficulty} | Etiketler:{" "}
                 {selectedSong.tags.join(", ")}
               </p>
-              <pre className="chords">{selectedSong.chords.trim()}</pre>
+              <pre
+                className="chords"
+                dangerouslySetInnerHTML={{
+                  __html: formatChords(selectedSong.chords),
+                }}
+              />
               <p>{selectedSong.notes}</p>
             </>
           )}

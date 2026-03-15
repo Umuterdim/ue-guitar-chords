@@ -168,7 +168,12 @@ body {
   padding: 12px;
   white-space: pre-wrap;
   margin-bottom: 12px;
+  color: #e5e7eb;
+}
+
+.chord-token {
   color: #7dd3fc;
+  font-weight: 600;
 }
 
 .footer {
