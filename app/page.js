@@ -3,42 +3,59 @@
 import { useState, useMemo } from "react";
 import { songs } from "../data/songs";
 
+const categories = [
+  "stüdyo",
+  "umut",
+  "samiş",
+  "eren",
+  "türkçe rock",
+  "ingilizce",
+];
+
 export default function Home() {
   const [search, setSearch] = useState("");
   const [keyFilter, setKeyFilter] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("türkçe rock");
   const [selectedId, setSelectedId] = useState(null);
 
-  const filteredSongs = useMemo(
-    () =>
-      songs.filter((song) => {
-        const s = search.toLowerCase();
-        const matchesSearch =
-          song.title.toLowerCase().includes(s) ||
-          song.artist.toLowerCase().includes(s);
-        const matchesKey = keyFilter ? song.key === keyFilter : true;
-        return matchesSearch && matchesKey;
-      }),
-    [search, keyFilter]
-  );
+  const filteredSongs = useMemo(() => {
+    return songs.filter((song) => {
+      // Kategori filtresi
+      const inCategory = selectedCategory
+        ? song.categories?.includes(selectedCategory)
+        : true;
+
+      // Arama filtresi
+      const s = search.toLowerCase();
+      const matchesSearch =
+        song.title.toLowerCase().includes(s) ||
+        song.artist.toLowerCase().includes(s);
+
+      // Ton filtresi
+      const matchesKey = keyFilter ? song.key === keyFilter : true;
+
+      return inCategory && matchesSearch && matchesKey;
+    });
+  }, [search, keyFilter, selectedCategory]);
 
   const selectedSong = songs.find((s) => s.id === selectedId) || null;
 
   return (
     <div className="page">
       <header className="header">
-  <h1>UE guitar chords</h1>
-  <input
-    type="text"
-    placeholder="Şarkı veya sanatçı ara..."
-    value={search}
-    onChange={(e) => setSearch(e.target.value)}
-  />
-</header>
+        <h1>UE guitar chords</h1>
+        <input
+          type="text"
+          placeholder="Şarkı veya sanatçı ara..."
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+        />
+      </header>
 
       <main className="main">
         <section className="panel">
           <div className="panel-header">
-            <h2>Şarkılar</h2>
+            <h2>Kategoriler</h2>
             <select
               value={keyFilter}
               onChange={(e) => setKeyFilter(e.target.value)}
@@ -53,7 +70,25 @@ export default function Home() {
               <option value="Em">Em</option>
             </select>
           </div>
+          <ul className="category-list">
+            {categories.map((cat) => (
+              <li
+                key={cat}
+                className={
+                  "category-item" +
+                  (selectedCategory === cat ? " category-item-active" : "")
+                }
+                onClick={() => {
+                  setSelectedCategory(cat);
+                  setSelectedId(null);
+                }}
+              >
+                {cat}
+              </li>
+            ))}
+          </ul>
 
+          <h3 className="song-list-title">Şarkılar</h3>
           <ul className="song-list">
             {filteredSongs.length === 0 && (
               <li className="song-empty">Hiç şarkı bulunamadı.</li>

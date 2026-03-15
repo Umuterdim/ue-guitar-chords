@@ -69,6 +69,41 @@ body {
   color: #e5e7eb;
 }
 
+.category-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.category-item {
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid #1f2937;
+  background: #020617;
+  cursor: pointer;
+  font-size: 13px;
+  text-transform: capitalize;
+  transition: background 0.15s, border-color 0.15s, transform 0.1s;
+}
+
+.category-item:hover {
+  background: #111827;
+  transform: translateY(-1px);
+}
+
+.category-item-active {
+  border-color: #10b981;
+  background: #022c22;
+}
+
+.song-list-title {
+  margin: 8px 0 4px;
+  font-size: 14px;
+  color: #9ca3af;
+}
+
 .song-list {
   list-style: none;
   display: flex;

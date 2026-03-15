@@ -1,5 +1,3 @@
-// data/songs.js
-// data/songs.js
 export const songs = [
     {
       id: 1,
@@ -9,6 +7,7 @@ export const songs = [
       capo: 0,
       difficulty: "Orta",
       tags: ["türkçe", "rock"],
+      categories: ["umut", "türkçe rock"],
       chords: `
 C          Am             Em
 Yok olmuş gençliğim giderken kaybettiğim
@@ -50,6 +49,7 @@ Neden neden gitme benden
       capo: 0,
       difficulty: "Kolay",
       tags: ["türkçe", "rock"],
+      categories: ["türkçe rock", "stüdyo"],
       chords: `
   [Intro]
   Am F C G
@@ -71,6 +71,7 @@ Neden neden gitme benden
       capo: 0,
       difficulty: "Orta",
       tags: ["türkçe", "rock"],
+      categories: ["türkçe rock", "eren"],
       chords: `
   [Intro]
   Dm Bb C Dm
@@ -97,6 +98,7 @@ Neden neden gitme benden
       capo: 2,
       difficulty: "Orta",
       tags: ["türkçe", "rock"],
+      categories: ["türkçe rock", "samiş"],
       chords: `
   [Intro]
   Em D C B7
@@ -123,6 +125,7 @@ Neden neden gitme benden
       capo: 0,
       difficulty: "Orta",
       tags: ["türkçe", "rock"],
+      categories: ["türkçe rock", "ingilizce"],
       chords: `
   Cm    Gm    Dm      Cm    
 
