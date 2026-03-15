@@ -111,27 +111,48 @@ export const songs = [
     },
     {
       id: 5,
-      title: "Hoşçakal",
+      title: "Helal Olsun",
       artist: "Duman",
       key: "G",
       capo: 0,
       difficulty: "Orta",
       tags: ["türkçe", "rock"],
       chords: `
-  [Intro]
-  G D Em C
-  
-  [Verse]
-  G              D
-  Belki de gitmeliyim
-  Em                C
-  Bu şehir bize dar geliyor
-  
-  [Chorus]
-  G            D
-  Hoşçakal diyemedim
-  Em               C
-  Son sözümü sakladım içime
+  Cm    Gm    Dm      Cm    
+
+D# Gm                         D# Gm 
+           Geceler zehir            geceler kara
+D# Gm                         D# Gm 
+           Uçasım gelir           kanadım yorar
+
+Cm   Gm   Dm    Cm 
+
+D# Gm                         D# Gm 
+         Yaralar derin             seneler kadar
+D# Gm                 D# Gm
+        Açılın geri    
+
+D#                     Gm
+Sabah olmuş gün doğmuş
+Dm                  F
+Her yerimde karlar
+D#                  Gm             Dm      F
+Doymadım dönülmüş deliye
+
+D#                  Gm
+Helal olsun aşkolsun
+Dm                   F
+Gözlerimde yaşlar
+D#                  Gm             Dm      F
+Durmadım dönülmez geriye
+
+Cm   Gm   Dm    Cm     
+
+D# Gm                       D# Gm 
+         Geceler benim         geceler bana
+D# Gm                     D# Gm 
+          Unutun beni
+
       `,
       notes: "Standart 4/4 rock ritmi; G–D–Em–C progresyonu klasik."
     }
